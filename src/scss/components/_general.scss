@@ -6,7 +6,8 @@ body {
 	font-family: "Gotham", sans-serif;
     font-size: 1.4rem;
 	line-height: 1.6rem;
-    background-color: var(--color-green);
+	background: #4d367a;
+	background: var(--linear-gradient-bg);
 }
 
 * {
@@ -63,10 +64,16 @@ h1 {
 }
 
 h2 {
-    font-size: 4rem;
-    line-height: 3rem;
+    color: var(--color-gradient-bg);
+    display: inline-block;
+	background-image: var(--linear-gradient-bg);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	font-size: 4rem;
+    line-height: 4.4rem;
 	font-weight: var(--font-weight-bold);
-    color: var(--color-grey);
+	text-align: center;
+	margin-bottom: 3rem;
 }
 
 h3 {
@@ -100,9 +107,9 @@ p {
 
 	&.small {
 		background-color: transparent;
-        color: var(--color-white);
+        color: var(--color-green);
         font-weight: var(--font-weight-bold);
-        border: 0.2rem solid var(--color-white);
+        border: 0.2rem solid var(--color-green);
         padding: 0.5rem;
         text-transform: uppercase;
         font-size: 1rem;
@@ -124,5 +131,47 @@ p {
 		color: var(--color-white);
 		background-color: transparent;
 		border: 0.2rem solid var(--color-white);
+	}
+}
+
+
+.container {
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0;
+	}
+
+	.wrapper {
+		.text-blocks {
+			background: #38549f;
+			background: var(--linear-gradient-blocks);
+			width: 52rem;
+			display: flex;
+			flex-direction: column;
+			padding: 3rem;
+			position: relative;
+			border-radius: 2rem;
+			margin: 2rem auto 4rem;
+
+			.blocks-wrap {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: column;
+
+				.text-block {
+					margin-bottom: 2rem;
+
+					dt {
+						font-size: 1.4rem;
+						line-height: 1.6rem;
+						font-weight: var(--font-weight-book);
+					}
+				}
+			}
+		}
 	}
 }

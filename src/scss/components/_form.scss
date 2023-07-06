@@ -1,0 +1,40 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .new-row {
+                width: 100%;
+                margin-bottom: 3rem;
+
+                .input-wrapper {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+    
+            .input-row {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

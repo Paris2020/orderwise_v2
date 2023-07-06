@@ -1,8 +1,11 @@
 .input-wrapper {
     position: relative;
+    width: 100%;
+    min-height: 4rem;
+    margin: 0 auto 1rem;
 
     .form-input {
-        width: 50rem;
+        width: 60rem;
         border: none;
         padding: 1rem 1rem 1rem 3.5rem;
         border-radius: 2rem;
@@ -20,11 +23,13 @@
     }
 
     .input-label {
+        width: 100%;
         position: absolute;
-        left: 3.5rem;
-        top: 1rem;
         font-size: 1.2rem;
         line-height: 1.4rem;
         cursor: text;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
