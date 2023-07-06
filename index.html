@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/main.css" />
+    <title>Orderwise</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img src="./src/assets/images/logo.png" alt="logo" />
+        </header>
+
+        <div class="wrapper">
+
+            <h2>Please give your feedback below</h2>
+
+            <div class="text-blocks">
+                <dl class="text-block">
+                    <dt>01. Click 'New line' if you need more space.</dt>
+                    <dd></dd>
+                </dl>
+                <dl class="text-block">
+                    <dt>02. Click 'X' to remove the current line.</dt>
+                    <dd></dd>
+                </dl>
+                <dl class="text-block">
+                    <dt>03. Your review must be at least 50 characters but no more than 1000 characters.</dt>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div>
+
+        <form method="post" action="">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="inputFormRow">
+                        <div class="input-group mb-3">
+                            <input type="text" name="title[]" class="form-control m-input" placeholder="Enter title" autocomplete="off">
+                            <div class="input-group-append">
+                                <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="newRow"></div>
+                    <button id="addRow" type="button" class="btn btn-info">Add Row</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+
+        // add row
+        $("#addRow").click(function () {
+            var html = '';
+            html += '<div id="inputFormRow">';
+            html += '<div class="input-group mb-3">';
+            html += '<input type="text" name="title[]" class="form-control m-input" placeholder="Enter title" autocomplete="off">';
+            html += '<div class="input-group-append">';
+            html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
+            html += '</div>';
+            html += '</div>';
+
+            $('#newRow').append(html);
+        });
+
+        // remove row
+        $(document).on('click', '#removeRow', function () {
+            $(this).closest('#inputFormRow').remove();
+        });
+    </script>
+</body>
+</html>

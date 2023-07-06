@@ -1,0 +1,30 @@
+.input-wrapper {
+    position: relative;
+
+    .form-input {
+        width: 50rem;
+        border: none;
+        padding: 1rem 1rem 1rem 3.5rem;
+        border-radius: 2rem;
+        max-width: 100%;
+        background-color: var(--color-grey);
+
+        &:focus,
+		&.move-up {
+
+			+.input-label {
+				transform: translateY(-100%);
+				font-size: 0;
+			}
+		}
+    }
+
+    .input-label {
+        position: absolute;
+        left: 3.5rem;
+        top: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        cursor: text;
+    }
+}
