@@ -4,6 +4,10 @@
     min-height: 4rem;
     margin: 0 auto 1rem;
 
+    @include break-point(mobile) {
+        min-height: 8rem;
+    }
+
     .form-input {
         width: 60rem;
         border: none;
@@ -11,6 +15,10 @@
         border-radius: 2rem;
         max-width: 100%;
         background-color: var(--color-grey);
+
+        @include break-point(mobile) {
+            margin-bottom: 1rem;
+        }
 
         &:focus,
 		&.move-up {
@@ -31,5 +39,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        @include break-point(mobile) {
+            flex-direction: column;
+        }
     }
 }
